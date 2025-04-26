@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('ingreso.html')
 
 # Este if es útil para correr localmente, pero Render usará gunicorn
 if __name__ == '__main__':
