@@ -1,4 +1,6 @@
 from flask import Flask, render_template
+from flask_sqlalchemy import SQLAlchemy
+import os
 
 app = Flask(__name__)
 
@@ -13,15 +15,14 @@ if __name__ == '__main__':
 
 # Esto es para ver si nos podemos conectar a la base de datos
 import os
-
+load_dotenv()
 SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URL")
 
 # Esto lo sumé despues
 
 
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-import os
+
+
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
