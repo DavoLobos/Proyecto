@@ -37,7 +37,7 @@ class Usuario(db.Model):
     nombre = db.Column(db.String(80), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
 
-@app.before_first_request
+
 def crear_tablas():
     db.create_all()
 
