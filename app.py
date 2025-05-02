@@ -45,5 +45,8 @@ def crear_tablas():
 def index():
     return "¡App conectada y tabla creada si no existía!"
 
+from app import db
+print(db.engine.table_names())
+
 if __name__ == '__main__':
     app.run(debug=True)
