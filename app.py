@@ -9,3 +9,9 @@ def home():
 # Este if es útil para correr localmente, pero Render usará gunicorn
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+# Esto es para ver si nos podemos conectar a la base de datos
+import os
+
+SQLALCHEMY_DATABASE_URI = os.getenv("postgresql://portgresnombre_user:Xim51GyQQjp5eXhcw6UAoEstEwE2fqgN@dpg-d0ad57h5pdvs73cllvt0-a.oregon-postgres.render.com/portgresnombre")
