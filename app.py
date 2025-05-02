@@ -41,12 +41,9 @@ class Usuario(db.Model):
 def crear_tablas():
     db.create_all()
 
-@app.route('/')
-def index():
-    return "¡App conectada y tabla creada si no existía!"
 
-from app import db
-print(db.engine.table_names())
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
