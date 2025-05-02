@@ -17,6 +17,7 @@ import os
 SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URL")
 
 # Esto lo sumé despues
+postgresql://portgresnombre_user:tu_password@dpg-d0ad57h5pdvs73cllvt0-a:5432/portgresnombre 
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
