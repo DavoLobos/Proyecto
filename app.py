@@ -41,9 +41,3 @@ class Usuario(db.Model):
 def crear_tablas():
     db.create_all()
 
-
-
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
