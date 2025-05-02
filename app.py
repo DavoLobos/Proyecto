@@ -14,4 +14,4 @@ if __name__ == '__main__':
 # Esto es para ver si nos podemos conectar a la base de datos
 import os
 
-SQLALCHEMY_DATABASE_URI = os.getenv("postgresql://portgresnombre_user:Xim51GyQQjp5eXhcw6UAoEstEwE2fqgN@dpg-d0ad57h5pdvs73cllvt0-a.oregon-postgres.render.com/portgresnombre")
+SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URL")
