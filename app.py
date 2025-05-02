@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from dotenv import load_dotenv
 from flask_sqlalchemy import SQLAlchemy
 import os
 
