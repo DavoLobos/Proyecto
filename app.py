@@ -39,8 +39,9 @@ def home():
 # Ruta para ver los usuarios registrados
 @app.route('/usuarios')
 def listar_usuarios():
+    print("➡ Se accedió a la ruta /usuarios")  # Esto se verá en los logs de Render
     usuarios = Usuario.query.all()
-    return '<br> hola'.join([f'{u.id} - {u.nombre} - {u.correo}' for u in usuarios])
+    return '<br>'.join([f'{u.id} - {u.nombre} - {u.correo}' for u in usuarios])
 
 # Ejecutar localmente
 if __name__ == '__main__':
