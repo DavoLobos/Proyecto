@@ -8,7 +8,7 @@ load_dotenv()
 
 app = Flask(__name__)
 
-# Leer las variables del archivo .env
+# Leer las variables de entorno
 DB_USER = os.getenv('DB_USER')
 DB_PASSWORD = os.getenv('DB_PASSWORD')
 DB_HOST = os.getenv('DB_HOST')
@@ -31,11 +31,17 @@ class Usuario(db.Model):
 with app.app_context():
     db.create_all()
 
-# Ruta principal con template
+# Ruta principal
 @app.route('/')
 def home():
     return render_template('ingreso.html')
 
-# Ejecutar la app localmente
+# Ruta para ver los usuarios registrados
+@app.route('/usuarios')
+def listar_usuarios():
+    usuarios = Usuario.query.all()
+    return '<br>'.join([f'{u.id} - {u.nombre} - {u.correo}' for u in usuarios])
+
+# Ejecutar localmente
 if __name__ == '__main__':
     app.run(debug=True)
