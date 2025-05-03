@@ -40,7 +40,7 @@ def home():
 @app.route('/usuarios')
 def listar_usuarios():
     usuarios = Usuario.query.all()
-    return '<br>'.join([f'{u.id} - {u.nombre} - {u.correo}' for u in usuarios])
+    return '<br> hola'.join([f'{u.id} - {u.nombre} - {u.correo}' for u in usuarios])
 
 # Ejecutar localmente
 if __name__ == '__main__':
