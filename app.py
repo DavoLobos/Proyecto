@@ -37,7 +37,7 @@ def home():
     return render_template('ingreso.html')
 
 # Ruta para ver los usuarios registrados
-@app.route('/usuarios')
+@app.route('/')
 def listar_usuarios():
     print("➡ Se accedió a la ruta /usuarios")  # Esto se verá en los logs de Render
     usuarios = Usuario.query.all()
